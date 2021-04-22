@@ -178,3 +178,94 @@ button {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+// Contact Section
+
+// Header
+
+.contactHeader{
+    text-align: center;
+}
+
+.emailTag,
+.icon {
+    @include font(2.6rem, $mainFont);
+    letter-spacing:1.1px;
+    text-transform: uppercase;
+}
+
+.phoneNumber {
+    padding-top: 2rem;
+}
+
+// Media Queries
+
+@media (max-width:940px) {
+
+    h2 {
+        font-size: 6rem;
+        font-family: "Playfair Display", serif;
+        padding-top: 25rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .headerCont h1 {
+        text-align: center;
+        z-index: 10;
+        padding-bottom: 2.5rem;
+        font-size: 10rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    .headerCont h1 {
+        text-align: center;
+        z-index: 10;
+        padding-bottom: 5rem;
+        font-size: 6rem;
+    } 
+
+    #about h2 {
+        @include font(4rem, $mainFont);
+        padding-top: 30rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .mainCont p{
+        text-align: center;
+    }
+
+}
+
+@media (max-width:480px) {
+
+    .headerCont h1 {
+        text-align: center;
+        z-index: 10;
+        padding-bottom: 3rem;
+        font-size: 6rem;
+    } 
+
+    #about h2 {
+        @include font(4rem, $mainFont);
+        padding-top: 5rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .section .iconSection {
+        text-align: center;
+
+        p {
+            padding-left: 0;
+        }
+    }
+
+    .sectionProfile .section3 .monthProfile {
+         margin-left: 0;
+         text-align: center; 
+    }
+}

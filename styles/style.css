@@ -428,8 +428,86 @@ button {
   letter-spacing: 1px;
 }
 
+.contactHeader {
+  text-align: center;
+}
+
+.emailTag,
+.icon {
+  font-size: 2.6rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.phoneNumber {
+  padding-top: 2rem;
+}
+
+@media (max-width: 940px) {
+  h2 {
+    font-size: 6rem;
+    font-family: "Playfair Display", serif;
+    padding-top: 25rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .headerCont h1 {
+    text-align: center;
+    z-index: 10;
+    padding-bottom: 2.5rem;
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerCont h1 {
+    text-align: center;
+    z-index: 10;
+    padding-bottom: 5rem;
+    font-size: 6rem;
+  }
+  #about h2 {
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    padding-top: 30rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .mainCont p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerCont h1 {
+    text-align: center;
+    z-index: 10;
+    padding-bottom: 3rem;
+    font-size: 6rem;
+  }
+  #about h2 {
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    padding-top: 5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .section .iconSection {
+    text-align: center;
+  }
+  .section .iconSection p {
+    padding-left: 0;
+  }
+  .sectionProfile .section3 .monthProfile {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 img {
   display: block;
+  width: 100%;
 }
 
 .indexHeader {
@@ -454,7 +532,6 @@ img {
 }
 
 .sectionCont img {
-  max-width: 70rem;
   width: 100%;
   display: block;
 }
@@ -465,6 +542,7 @@ img {
   top: -5rem;
   -webkit-box-shadow: 40px 30px 0 0 #FDFA69;
           box-shadow: 40px 30px 0 0 #FDFA69;
+  max-width: 50%;
 }
 
 .sectionImg2 {
@@ -472,6 +550,7 @@ img {
   right: 0;
   -webkit-box-shadow: -40px 40px 0 0 #FDFA69;
           box-shadow: -40px 40px 0 0 #FDFA69;
+  max-width: 50%;
 }
 
 .mapImage {
@@ -481,9 +560,24 @@ img {
 }
 
 .section3Img {
-  -webkit-box-shadow: 30px 40px 0 0 #FDFA69;
-          box-shadow: 30px 40px 0 0 #FDFA69;
-  height: 304px;
+  -webkit-box-shadow: 30px 40px 0 0 #fdfa69;
+  box-shadow: 30px 40px 0 0 #fdfa69;
+  height: 30%;
+  min-width: 29%;
+}
+
+.photoGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15rem auto;
+}
+
+.photoGallery img {
+  width: 30%;
 }
 
 .blogHeader {
@@ -507,13 +601,14 @@ img {
 
 .rightPicture {
   right: 0;
-  bottom: -9vh;
+  top: -30rem;
   position: absolute;
-  width: 56vw;
-  max-height: 650px;
+  max-height: 500px;
+  width: calc(100% - 4rem);
 }
 
 .rightPicture img {
+  height: 100%;
   width: 100%;
   -webkit-box-shadow: -4rem 4rem 0 0 #FDFA69;
           box-shadow: -4rem 4rem 0 0 #FDFA69;
@@ -528,6 +623,65 @@ img {
   width: 100%;
 }
 
+.contactHeader {
+  background-image: url(../assets/captured-final-assets/contact-header.jpg);
+  background-size: cover;
+}
+
+@media (max-width: 940px) {
+  .headerImgCont {
+    right: 39%;
+    bottom: -23rem;
+    width: 22%;
+    max-height: 800px;
+    position: absolute;
+    -webkit-box-shadow: 0 0 0 4.5rem #fdfa69;
+    box-shadow: 0 0 0 1rem #fdfa69;
+  }
+  .sectionImg1 {
+    position: unset;
+    -webkit-box-shadow: 0 0 0 1rem #fdfa69;
+            box-shadow: 0 0 0 1rem #fdfa69;
+    max-width: 50%;
+    margin: 5rem auto 0;
+  }
+  .sectionImg2 {
+    position: unset;
+    -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
+    box-shadow: 0 0 0 1rem #fdfa69;
+    max-width: 50%;
+    margin: 5rem auto 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerImgCont {
+    display: none;
+  }
+  .section3Img {
+    display: none;
+  }
+  .photoGallery img {
+    width: 100%;
+  }
+  .photoGallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 2rem auto;
+  }
+  .photoGallery img:nth-child(-n+2) {
+    padding-bottom: 2rem;
+  }
+}
+
 .wrapper {
   max-width: 1300px;
   width: 90%;
@@ -540,6 +694,17 @@ nav {
 
 nav li {
   float: right;
+}
+
+footer p {
+  background-color: #2C2C2C;
+  color: #FFF;
+  text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+  border-bottom: 3px solid #4CEEA7;
 }
 
 .wrapper.headerCont {
@@ -558,6 +723,7 @@ nav li {
 
 main {
   background-color: #EFFDF3;
+  padding-bottom: 10rem;
 }
 
 .sectionCont {
@@ -589,6 +755,7 @@ main {
 
 .section2 {
   background-color: #EFFDF3;
+  padding-bottom: 10rem;
 }
 
 .fas {
@@ -630,27 +797,11 @@ main {
 
 .sectionProfile {
   background-color: #EFFDF3;
-  height: 60vh;
+  height: 100%;
 }
 
 .monthProfile {
   margin-left: 15rem;
-}
-
-.photoGallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 15rem auto;
-}
-
-footer p {
-  background-color: #2C2C2C;
-  color: #FFF;
-  text-align: center;
 }
 
 .blog {
@@ -667,11 +818,13 @@ footer p {
 }
 
 .leftBlog {
-  width: 35vh;
+  width: 36vw;
 }
 
 .rightBlog {
-  margin-left: 175px;
+  width: 60%;
+  outline: 1px solid red;
+  position: relative;
 }
 
 aside {
@@ -698,9 +851,13 @@ aside a {
 
 article {
   border: 10px solid #FDFA69;
+  border-top: none;
   border-right: none;
-  margin-top: 15rem;
+  margin-top: 45rem;
+  padding-top: 5rem;
   padding-left: 3rem;
+  width: 90%;
+  max-width: 1300px;
 }
 
 .flexComment {
@@ -761,4 +918,103 @@ textarea {
   margin-top: 3rem;
   resize: none;
   height: 20rem;
+}
+
+.contactHeader {
+  height: 70vh;
+}
+
+.mainContact {
+  height: 70vh;
+}
+
+.email {
+  width: 28%;
+}
+
+.icon .fab {
+  padding: 16rem 1.5rem 2.5rem 0;
+}
+
+.form {
+  background-color: #FFF;
+  -webkit-box-shadow: -3rem 3rem 0 0 #FDFA69;
+          box-shadow: -3rem 3rem 0 0 #FDFA69;
+  padding: 10rem 5rem 0 5rem;
+  margin-top: -30rem;
+}
+
+.form input {
+  background-color: #FFF;
+}
+
+.form textarea {
+  background-color: #FFF;
+  margin-top: 10rem;
+}
+
+.form button {
+  margin: 5rem 0 5rem 0;
+}
+
+.formCont {
+  position: relative;
+}
+
+#message {
+  width: 100%;
+  border: 2px solid #4CEEA7;
+  margin-top: 3rem;
+  resize: none;
+  height: 30rem;
+}
+
+@media (max-width: 940px) {
+  .section3 .monthProfile {
+    margin-left: 50px;
+    text-align: left;
+  }
+  .wrapper .sectionCont {
+    display: inline-block;
+    height: 100%;
+  }
+  body .section1 {
+    height: 100%;
+    margin-bottom: 0rem;
+  }
+  .subsection {
+    text-align: center;
+  }
+  .sectionCont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .iconSection {
+    width: 100%;
+  }
+  .section3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 4rem 0;
+  }
+  .section:nth-child(-n+2) {
+    padding-top: 0;
+  }
 }

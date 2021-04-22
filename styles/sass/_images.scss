@@ -2,6 +2,7 @@
 
 img {
     display: block;
+    width: 100%;
 }
 
 
@@ -31,7 +32,6 @@ img {
 }
 
 .sectionCont img {
-    max-width: 70rem;
     width: 100%;
     display: block;
 }
@@ -40,13 +40,16 @@ img {
     position: absolute;
     left: 0;
     top: -5rem;
-    box-shadow: 40px 30px 0 0 $boxShadow
+    box-shadow: 40px 30px 0 0 $boxShadow;
+    max-width:50%;
 }
 
 .sectionImg2 {
     position: absolute;
     right: 0;
     box-shadow: -40px 40px 0 0 $boxShadow ;
+    max-width:50%;
+
 }
 
 .mapImage {
@@ -56,8 +59,20 @@ img {
 }
 
 .section3Img {
-    box-shadow: 30px 40px 0 0 $boxShadow;
-    height: 304px;
+    -webkit-box-shadow: 30px 40px 0 0 #fdfa69;
+    box-shadow: 30px 40px 0 0 #fdfa69;
+    height: 30%;
+    min-width: 29%;
+}
+
+.photoGallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 15rem auto;
+
+    img{
+        width: 30%;
+    }
 }
 
 // Blog Styles
@@ -86,12 +101,14 @@ img {
 .rightPicture {
 
     right: 0;
-    bottom: -9vh;
+    top: -30rem;
     position: absolute;
-    width: 56vw;
-    max-height: 650px;
+    max-height: 500px;
+    width: calc(100% - 4rem);
+
 
         img {
+            height: 100%;
         width: 100%;
         box-shadow: -4rem 4rem 0 0 $boxShadow;
     }
@@ -109,5 +126,63 @@ img {
 // Contact styles
 
 .contactHeader {
-    
+    background-image: url(../assets/captured-final-assets/contact-header.jpg);
+    background-size: cover;
+}
+
+// Media Queries
+
+@media (max-width:940px) {
+    // Home Page Media Query
+
+.headerImgCont {
+    right: 39%;
+    bottom: -23rem;
+    width: 22%;
+    max-height: 800px;
+    position: absolute;
+    -webkit-box-shadow: 0 0 0 4.5rem #fdfa69;
+    box-shadow: 0 0 0 1rem #fdfa69;
+}
+
+.sectionImg1{
+    position: unset; 
+    box-shadow: 0 0 0 1rem #fdfa69;
+    max-width: 50%;
+    margin: 5rem auto 0;
+}
+
+.sectionImg2 {
+    position: unset;
+    -webkit-box-shadow: -40px 40px 0 0 #fdfa69;
+    box-shadow: 0 0 0 1rem #fdfa69;
+    max-width: 50%;
+    margin: 5rem auto 5rem;
+}
+}
+
+@media (max-width:480px) {
+
+    .headerImgCont {
+        display: none;
+    }
+
+    .section3Img {
+        display: none;
+    }
+
+    .photoGallery img {
+         width: 100%; 
+    }
+
+    .photoGallery {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 2rem auto;
+
+        img:nth-child(-n+2) {
+            padding-bottom: 2rem;
+        }
+    }
 }
