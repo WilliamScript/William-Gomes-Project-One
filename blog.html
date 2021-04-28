@@ -16,7 +16,7 @@
 <body class="blog">
     <header class="blogHeader">
         <div class="wrapper">
-            <nav >
+            <nav>
                 <ul>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./blog.html">Blog</a></li>
@@ -84,7 +84,7 @@
                         venenatis egestas quis vel
                         justo. Maecenas semper suscipit nunc, sed aliquam</p>
                 </article>
-                <div class="flexComment wrapper">
+                <div class="flexComment wrapper" id="commentParent">
                     <h4>Comments:</h4>
                     <div class="comment">
                         <div class="profilePic">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
                 <form action="POST">
-                    <fieldset>
+                    <!-- <fieldset> -->
                         <label for="name" class="visuallyHidden">Name</label>
                         <input type="text" placeholder="Name" name="name" id="name">
                         
@@ -120,7 +120,7 @@
                         <label for="comment" class="visuallyHidden">Comment</label>
                         <textarea name="comment" id="comment" placeholder="Comment"></textarea>
                         <button> Post Comment</button>
-                    </fieldset>
+                    <!-- </fieldset> -->
                 </form>
             </div>
 
@@ -129,6 +129,7 @@
     <footer>
         <p>Copyright &#9400; 2018 HackerYou</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
